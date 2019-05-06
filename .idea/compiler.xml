@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="qa19-trello-web_main" target="1.8" />
+      <module name="qa19-trello-web_test" target="1.8" />
       <module name="trello-web_main" target="1.8" />
       <module name="trello-web_test" target="1.8" />
     </bytecodeTargetLevel>
