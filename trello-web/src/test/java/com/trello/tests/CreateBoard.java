@@ -13,9 +13,9 @@ public class CreateBoard extends TestBase {
         //verify, board created
 
         app.clickOnPlusButtonOnHeader();
-        app.selectCreateBoardFromDropDown();
-        app.fillBoardCreationForm("Test board");
-        app.submitBoardCreation();
+        app.getBoardHelper().selectCreateBoardFromDropDown();
+        app.getBoardHelper().fillBoardCreationForm("Test board");
+        app.getBoardHelper().submitBoardCreation();
     }
 
     @Test(enabled = false)
