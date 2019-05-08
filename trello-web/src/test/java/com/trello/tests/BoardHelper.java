@@ -3,8 +3,15 @@ package com.trello.tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static jdk.nashorn.internal.objects.NativeJava.type;
+
 public class BoardHelper {
-    WebDriver wd;
+    private WebDriver wd;
+
+    public BoardHelper(WebDriver wd) {
+
+        this.wd = wd;
+    }
 
     public void click(By locator) {
         wd.findElement(locator).click();
@@ -16,17 +23,17 @@ public class BoardHelper {
         wd.findElement(locator).sendKeys(text);
     }
 
-    protected void submitBoardCreation() {
+    public void submitBoardCreation() {
         click(By.cssSelector("[type='submit']"));
 
     }
 
-    protected void fillBoardCreationForm(String boardName) {
+    public void fillBoardCreationForm(String boardName) {
         type(By.xpath("//*[@class='subtle-input']"), boardName);
 
     }
 
-    protected void selectCreateBoardFromDropDown() {
+    public void selectCreateBoardFromDropDown() {
         click(By.cssSelector(".js-new-board"));
 
     }
