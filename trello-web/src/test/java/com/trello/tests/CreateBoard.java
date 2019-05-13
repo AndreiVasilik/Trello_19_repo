@@ -12,7 +12,7 @@ public class CreateBoard extends TestBase {
         //fillBoardForm
         //verify, board created
 
-        app.clickOnPlusButtonOnHeader();
+        app.getHeader().clickOnPlusButtonOnHeader();
         app.getBoardHelper().selectCreateBoardFromDropDown();
         app.getBoardHelper().fillBoardCreationForm("Test board");
         app.getBoardHelper().submitBoardCreation();

@@ -1,17 +1,16 @@
-package com.trello.tests;
+package manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-    private TeamHelper teamHelper;
-    private BoardHelper boardHelper;
     HeaderHelper header;
     WebDriver wd;
+    private TeamHelper teamHelper;
+    private BoardHelper boardHelper;
 
     public void start() {
         wd = new ChromeDriver();
@@ -23,9 +22,8 @@ public class ApplicationManager {
         login("black_sun_2004@bk.ru", "Mystic1985");
         boardHelper = new BoardHelper(wd);
         teamHelper = new TeamHelper(wd);
-        header= new HeaderHelper(wd);
+        header = new HeaderHelper(wd);
     }
-
 
 
     public void openSite(String url) {
