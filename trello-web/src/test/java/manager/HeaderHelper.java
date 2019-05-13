@@ -18,4 +18,10 @@ public class HeaderHelper {
         Thread.sleep(10000);
         click(By.cssSelector(".header-btn-icon.icon-lg.icon-add.light"));
     }
+
+    public void clickOnTheHomeIconHeader() throws InterruptedException {
+        Thread.sleep(5000);
+        click(By.xpath("//span[@class='header-btn-icon icon-lg icon-house light']"));
+
+    }
 }

@@ -16,6 +16,7 @@ public class CreateBoard extends TestBase {
         app.getBoardHelper().selectCreateBoardFromDropDown();
         app.getBoardHelper().fillBoardCreationForm("Test board");
         app.getBoardHelper().submitBoardCreation();
+        app.getHeader().clickOnTheHomeIconHeader();
     }
 
     @Test(enabled = false)
